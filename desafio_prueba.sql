@@ -65,3 +65,41 @@ INSERT INTO clientes(
     '92446285',
     'libertad 270'
 );
+
+INSERT INTO productos(
+    nombre,
+    descripcion,
+    valor_unitario,
+), VALUES(
+    'crema',
+    'crema para piel',
+    '8.000'
+), (
+    'perfume',
+    'perfume aroma bosque',
+    '20.000'
+), (
+    'polera',
+    'polera con filtro uv'
+    '30.000'
+), (
+    'guitara',
+    'guitarra acústica',
+    '100.000'
+), (
+    'piano',
+    'piano para aprender',
+    '300.000'
+), (
+    'flauta',
+    'flauta dulce',
+    '10.000'
+), (
+    'camisa',
+    'camisa para pesca con mosca',
+    '50.000'
+), (
+    'gorro',
+    'gorro para trotar',
+    '20.000'
+);
