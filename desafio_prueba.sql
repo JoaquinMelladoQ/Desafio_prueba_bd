@@ -35,7 +35,9 @@ CREATE TABLE facturas_productos(
     facturas_id FOREIGN KEY
     REFERENCES facturas (id),
     productos_id FOREIGN KEY
-    REFERENCES productos (id)
+    REFERENCES productos (id),
+    cantidad INT NOT NULL,
+    total INT NOT NULL
 );
 
 INSERT INTO clientes(
