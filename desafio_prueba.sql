@@ -1,6 +1,6 @@
 CREATE DATABASE prueba;
 
-CREATE TABLE cliente(
+CREATE TABLE clientes(
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     rut NUMERIC(10) NOT NULL,
@@ -16,3 +16,4 @@ CREATE TABLE facturas(
     clientes_id FOREIGN KEY (id),
     REFERENCES cliente (id)
 );
+
