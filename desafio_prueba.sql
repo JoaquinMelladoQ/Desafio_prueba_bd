@@ -65,38 +65,47 @@ INSERT INTO clientes(
 );
 
 INSERT INTO productos(
+    id,
     nombre,
     descripcion,
     valor_unitario,
 ), VALUES(
+    '1',
     'crema',
     'crema para piel',
     '8.000'
 ), (
+    '2',
     'perfume',
     'perfume aroma bosque',
     '20.000'
 ), (
+    '3',
     'polera',
     'polera con filtro uv'
     '30.000'
 ), (
+    '4',
     'guitara',
     'guitarra acústica',
     '100.000'
 ), (
+    '5',
     'piano',
     'piano para aprender',
     '300.000'
 ), (
+    '6',
     'flauta',
     'flauta dulce',
     '10.000'
 ), (
+    '7',
     'camisa',
     'camisa para pesca con mosca',
     '50.000'
 ), (
+    '8',
     'gorro',
     'gorro para trotar',
     '20.000'
@@ -173,3 +182,4 @@ INSERT INTO facturas(
     '',
     '4'
 );
+
