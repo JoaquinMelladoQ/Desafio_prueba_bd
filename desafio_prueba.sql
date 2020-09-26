@@ -1,14 +1,14 @@
 CREATE DATABASE prueba;
 
 CREATE TABLE clientes(
-    id SERIAL PRIMARY KEY,
+    id INT NOT NULL UNIQUE PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     rut NUMERIC(10) NOT NULL,
     direccion VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE facturas(
-    id SERIAL PRIMARY KEY,
+    id INT NOT NULL UNIQUE PRIMARY KEY,
     fecha_factura DATE DEFAULT CURRENT_DATE,
     subtotal INT NOT NULL,
     iva INT NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE facturas(
 );
 
 CREATE TABLE productos(
-    id SERIAL PRIMARY KEY,
+    id INT NOT NULL UNIQUE PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     descripcion VARCHAR(200) NOT NULL,
     valor_unitario INT NOT NULL,
@@ -27,13 +27,13 @@ CREATE TABLE productos(
 );
 
 CREATE TABLE categorias(
-    id SERIAL PRIMARY KEY,
+    id INT NOT NULL UNIQUE PRIMARY KEY,
     nombre VARCHAR(50),
     descripcion VARCHAR(200)
 );
 
 CREATE TABLE facturas_productos(
-    id SERIAL PRIMARY KEY,
+    id INT NOT NULL UNIQUE PRIMARY KEY,
     facturas_id FOREIGN KEY
     REFERENCES facturas (id),
     productos_id FOREIGN KEY
@@ -120,5 +120,25 @@ INSERT INTO categorias(
 
 
 INSERT INTO facturas(
-    
+    id,
+    fecha_factura,
+    subtotal,
+    iva,
+    total,
+    clientes_id
+), VALUES(
+    '1',
+    '',
+    '',
+    '0.19',
+    '',
+    '1'
+), (
+    '2',
+    '',
+    '',
+    '',
+    '1'
+), (
+
 )
