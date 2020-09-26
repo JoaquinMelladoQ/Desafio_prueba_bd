@@ -31,3 +31,7 @@ CREATE TABLE categorias(
     nombre VARCHAR(50),
     descripcion VARCHAR(200)
 );
+
+CREATE TABLE facturas_productos(
+
+);
