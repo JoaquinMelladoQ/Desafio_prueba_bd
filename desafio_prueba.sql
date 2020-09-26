@@ -8,5 +8,11 @@ CREATE TABLE cliente(
 );
 
 CREATE TABLE facturas(
-    
+    id SERIAL PRIMARY KEY,
+    fecha_factura DATE DEFAULT CURRENT_DATE,
+    subtotal INT NOT NULL,
+    iva INT NOT NULL,
+    total INT NOT NULL,
+    clientes_id FOREIGN KEY (id),
+    REFERENCES cliente (id)
 );
