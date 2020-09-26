@@ -112,15 +112,19 @@ INSERT INTO productos(
 );
 
 INSERT INTO categorias(
+    id,
     nombre,
     descripcion
 ), VALUES(
+    '1',
     'belleza',
     'productos de belleza'
 ), (
+    '2',
     'ropa deportiva',
     'ropa técnica para hacer deporte'
 ), (
+    '3',
     'instrumentos musicales',
     'aprende a tocar un instrumento este año'
 );
