@@ -15,6 +15,12 @@ CREATE TABLE facturas(
     REFERENCES cliente (id)
 );
 
+CREATE TABLE categorias(
+    id INT NOT NULL UNIQUE PRIMARY KEY,
+    nombre VARCHAR(50),
+    descripcion VARCHAR(200)
+);
+
 CREATE TABLE productos(
     id INT NOT NULL UNIQUE PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
@@ -22,12 +28,6 @@ CREATE TABLE productos(
     valor_unitario INT NOT NULL,
     categoria_id FOREIGN KEY
     REFERENCES categorias(id)
-);
-
-CREATE TABLE categorias(
-    id INT NOT NULL UNIQUE PRIMARY KEY,
-    nombre VARCHAR(50),
-    descripcion VARCHAR(200)
 );
 
 CREATE TABLE facturas_productos(
@@ -203,4 +203,157 @@ INSERT INTO facturas(
     '',
     '4'
 );
+
+INSERT INTO facturas_productos(
+    id,
+    facturas_id,
+    productos_id,
+    cantidad,
+    total
+), VALUES(
+    '1',
+    '1',
+    '1',
+    '1',
+    ''
+), (
+    '2',
+    '1',
+    '2',
+    '1',
+    ''
+), (
+    '3',
+    '2',
+    '3',
+    '1',
+    ''
+), (
+    '4',
+    '2',
+    '5',
+    '1',
+    ''
+), (
+    '5',
+    '2',
+    '4',
+    '2',
+    ''
+), (
+    '6',
+    '3',
+    '7',
+    '1',
+    ''
+), (
+    '7',
+    '3',
+    '8',
+    '1',
+    ''
+), (
+    '8',
+    '3',
+    '4',
+    '1',
+    ''
+), (
+    '9',
+    '4',
+    '5',
+    '1',
+    ''
+), (
+    '10',
+    '4',
+    '7',
+    '2',
+    ''
+), (
+    '11',
+    '5',
+    '6',
+    '1',
+    ''
+), (
+    '12',
+    '5',
+    '1',
+    '1',
+    ''
+), (
+    '13',
+    '5',
+    '7',
+    '3',
+    ''
+), (
+    '14',
+    '6',
+    '5',
+    '2',
+    ''
+), (
+    '15',
+    '7',
+    '2',
+    '1',
+    ''
+), (
+    '16',
+    '7',
+    '1',
+    '1',
+    ''
+), (
+    '17',
+    '8',
+    '4',
+    '2',
+    ''
+), (
+    '18',
+    '8',
+    '5',
+    '1',
+    ''
+), (
+    '19',
+    '8',
+    '8',
+    '1'.
+    ''
+), (
+    '20',
+    '9',
+    '8',
+    '1',
+    ''
+), (
+    '21',
+    '9',
+    '7',
+    '1',
+    ''
+), (
+    '22',
+    '9',
+    '6',
+    '1',
+    ''
+), (
+    '23',
+    '9',
+    '1',
+    '1',
+    ''
+), (
+    '24',
+    '10',
+    '5',
+    '1',
+    ''
+);
+
 
