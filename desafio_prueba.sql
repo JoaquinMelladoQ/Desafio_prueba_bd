@@ -39,3 +39,29 @@ CREATE TABLE facturas_productos(
     productos_id FOREIGN KEY
     REFERENCES productos (id)
 );
+
+INSERT INTO clientes(
+    nombre,
+    rut,
+    direccion
+), VALUES(
+    'Esposito',
+    '22533335',
+    'quinta avenina 322'
+), (
+    'Esperanza',
+    '299938655',
+    'san ignacio 256'
+), (
+    'Camilo',
+    '125456578',
+    'mata 310'
+), (
+    'Florencia',
+    '75459394',
+    'echevers 98'
+), (
+    'Cecilia',
+    '92446285',
+    'libertad 270'
+);
