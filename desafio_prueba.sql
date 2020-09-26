@@ -103,3 +103,17 @@ INSERT INTO productos(
     'gorro para trotar',
     '20.000'
 );
+
+INSERT INTO categorias(
+    nombre,
+    descripcion
+), VALUES(
+    'belleza',
+    'productos de belleza'
+), (
+    'ropa deportiva',
+    'ropa técnica para hacer deporte'
+), (
+    'instrumentos musicales',
+    'aprende a tocar un instrumento este año'
+);
