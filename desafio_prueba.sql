@@ -25,3 +25,9 @@ CREATE TABLE productos(
     categoria_id FOREIGN KEY
     REFERENCES categorias(id)
 );
+
+CREATE TABLE categorias(
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50),
+    descripcion VARCHAR(200)
+);
