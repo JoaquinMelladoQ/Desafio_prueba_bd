@@ -33,5 +33,9 @@ CREATE TABLE categorias(
 );
 
 CREATE TABLE facturas_productos(
-
+    id SERIAL PRIMARY KEY,
+    facturas_id FOREIGN KEY
+    REFERENCES facturas (id),
+    productos_id FOREIGN KEY
+    REFERENCES productos (id)
 );
