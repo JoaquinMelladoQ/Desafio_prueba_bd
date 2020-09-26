@@ -9,9 +9,8 @@ CREATE TABLE clientes(
 
 CREATE TABLE facturas(
     id INT NOT NULL UNIQUE PRIMARY KEY,
-    fecha_factura DATE DEFAULT CURRENT_DATE,
+    fecha_factura INT NOT NULL,
     subtotal INT NOT NULL,
-    iva INT NOT NULL,
     total INT NOT NULL,
     clientes_id FOREIGN KEY (id)
     REFERENCES cliente (id)
