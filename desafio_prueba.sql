@@ -3,7 +3,7 @@ CREATE DATABASE prueba;
 CREATE TABLE clientes(
     id INT NOT NULL UNIQUE PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
-    rut NUMERIC(10) NOT NULL,
+    rut NUMERIC(9) NOT NULL,
     direccion VARCHAR(100) NOT NULL
 );
 
@@ -11,7 +11,7 @@ CREATE TABLE facturas(
     id INT NOT NULL UNIQUE PRIMARY KEY,
     fecha_factura INT NOT NULL,
     subtotal INT NOT NULL,
-    clientes_id FOREIGN KEY (id)
+    clientes_id INT NOT NULL FOREIGN KEY (id)
     REFERENCES cliente (id)
 );
 
@@ -100,49 +100,49 @@ INSERT INTO productos(
     '1',
     'crema',
     'crema para piel',
-    '8.000',
+    '80',
     '1'
 ), (
     '2',
     'perfume',
     'perfume aroma bosque',
-    '20.000',
+    '200',
     '1'
 ), (
     '3',
     'polera',
     'polera con filtro uv'
-    '30.000',
+    '35',
     '2'
 ), (
     '4',
     'guitara',
     'guitarra acústica',
-    '100.000',
+    '30',
     '3'
 ), (
     '5',
     'piano',
     'piano para aprender',
-    '300.000',
+    '300',
     '3'
 ), (
     '6',
     'flauta',
     'flauta dulce',
-    '10.000',
+    '50',
     '3'
 ), (
     '7',
     'camisa',
     'camisa para pesca con mosca',
-    '50.000',
+    '25',
     '2'
 ), (
     '8',
     'gorro',
     'gorro para trotar',
-    '20.000',
+    '10',
     '2'
 );
 
@@ -241,52 +241,52 @@ INSERT INTO facturas_productos(
 ), VALUES(
     '1',
     '1',
-    '1', -- crema * 2 = 16.000
+    '1', -- crema * 2 = 
     '2'
 ), (
     '2',
     '2',
-    '2', -- perfume * 3 = 60.000
+    '2', -- perfume * 3 = 
     '3'
 ), (
     '3',
     '3',
-    '3', -- polera * 3 = 90.000
+    '3', -- polera * 3 = 
     '3'
 ), (
     '4',
     '4',
-    '5', --piano * 2 = 600.000
+    '5', --piano * 2 = 
     '2'
 ), (
     '5',
     '5',
-    '4', -- guitarra * 3 = 300.000`
+    '4', -- guitarra * 3 = 
     '3'
 ), (
     '6',
     '6',
-    '7', -- camisa * 1 = 50.000
+    '7', -- camisa * 1 = 
     '1'
 ), (
     '7',
     '7',
-    '8', -- gorro * 2 = 40.000
+    '8', -- gorro * 2 = 
     '2'
 ), (
     '8',
     '8',
-    '4', -- guitarra * 3 = 300.000
+    '4', -- guitarra * 3 = 
     '3'
 ), (
     '9',
     '9',
-    '5', -- piano * 4 = 1.200.000
+    '5', -- piano * 4 = 
     '4'
 ), (
     '10',
     '10',
-    '7', -- camisa * 1 = 50.000
+    '7', -- camisa * 1 = 
     '1'
 );
 
@@ -296,3 +296,17 @@ INSERT INTO facturas_productos(
 -- ¿Que cliente realizó la compra más cara?
 -- ¿Que cliente pagó sobre 100 de monto?
 -- ¿Cuantos clientes han comprado el producto 6.
+
+
+SELECT clientes_id FROM facturas
+ORDER BY subtotal DESC LIMIT 1;
+
+SELECT clientes_id FROM facturas
+WHERE subtotal > 100
+GROUP BY clientes_id
+ORDER BY clientes_id;
+
+
+
+
+
