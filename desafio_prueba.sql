@@ -69,46 +69,55 @@ INSERT INTO productos(
     nombre,
     descripcion,
     valor_unitario,
+    categoria_id
 ), VALUES(
     '1',
     'crema',
     'crema para piel',
-    '8.000'
+    '8.000',
+    '1'
 ), (
     '2',
     'perfume',
     'perfume aroma bosque',
-    '20.000'
+    '20.000',
+    '1'
 ), (
     '3',
     'polera',
     'polera con filtro uv'
-    '30.000'
+    '30.000',
+    '2'
 ), (
     '4',
     'guitara',
     'guitarra acústica',
-    '100.000'
+    '100.000',
+    '3'
 ), (
     '5',
     'piano',
     'piano para aprender',
-    '300.000'
+    '300.000',
+    '3'
 ), (
     '6',
     'flauta',
     'flauta dulce',
-    '10.000'
+    '10.000',
+    '3'
 ), (
     '7',
     'camisa',
     'camisa para pesca con mosca',
-    '50.000'
+    '50.000',
+    '2'
 ), (
     '8',
     'gorro',
     'gorro para trotar',
-    '20.000'
+    '20.000',
+    '2'
 );
 
 INSERT INTO categorias(
