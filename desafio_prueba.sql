@@ -117,3 +117,8 @@ INSERT INTO categorias(
     'instrumentos musicales',
     'aprende a tocar un instrumento este año'
 );
+
+
+INSERT INTO facturas(
+    
+)
