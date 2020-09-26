@@ -11,7 +11,6 @@ CREATE TABLE facturas(
     id INT NOT NULL UNIQUE PRIMARY KEY,
     fecha_factura INT NOT NULL,
     subtotal INT NOT NULL,
-    total INT NOT NULL,
     clientes_id FOREIGN KEY (id)
     REFERENCES cliente (id)
 );
@@ -122,20 +121,15 @@ INSERT INTO facturas(
     id,
     fecha_factura,
     subtotal,
-    iva,
-    total,
     clientes_id
 ), VALUES(
     '1',
-    '',
-    '',
-    '0.19',
+    '2001-02-03',
     '',
     '1'
 ), (
     '2',
-    '',
-    '',
+    '2001-03-03',
     '',
     '1'
 ), (
