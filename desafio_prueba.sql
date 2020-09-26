@@ -13,7 +13,15 @@ CREATE TABLE facturas(
     subtotal INT NOT NULL,
     iva INT NOT NULL,
     total INT NOT NULL,
-    clientes_id FOREIGN KEY (id),
+    clientes_id FOREIGN KEY (id)
     REFERENCES cliente (id)
 );
 
+CREATE TABLE productos(
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    descripcion VARCHAR(200) NOT NULL,
+    valor_unitario INT NOT NULL,
+    categoria_id FOREIGN KEY
+    REFERENCES categorias(id)
+);
