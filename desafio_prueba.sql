@@ -246,7 +246,7 @@ INSERT INTO facturas_productos(
 ), (
     '2',
     '2',
-    '2', -- perfume * 3 = 600
+    '6', -- flauta * 3 = 150
     '3'
 ), (
     '3',
@@ -286,7 +286,7 @@ INSERT INTO facturas_productos(
 ), (
     '10',
     '10',
-    '7', -- camisa * 1 = 25
+    '6', -- flauta * 1 = 50
     '1'
 );
 
