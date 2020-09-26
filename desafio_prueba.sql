@@ -6,3 +6,7 @@ CREATE TABLE cliente(
     rut NUMERIC(10) NOT NULL,
     direccion VARCHAR(100) NOT NULL
 );
+
+CREATE TABLE facturas(
+    
+);
