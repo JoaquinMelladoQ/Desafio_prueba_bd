@@ -39,26 +39,32 @@ CREATE TABLE facturas_productos(
 );
 
 INSERT INTO clientes(
+    id,
     nombre,
     rut,
     direccion
 ), VALUES(
+    '1',
     'Esposito',
     '22533335',
     'quinta avenina 322'
 ), (
+    '2',
     'Esperanza',
     '299938655',
     'san ignacio 256'
 ), (
+    '3',
     'Camilo',
     '125456578',
     'mata 310'
 ), (
+    '4',
     'Florencia',
     '75459394',
     'echevers 98'
 ), (
+    '5',
     'Cecilia',
     '92446285',
     'libertad 270'
