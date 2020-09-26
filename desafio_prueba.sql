@@ -146,7 +146,7 @@ INSERT INTO categorias(
     'aprende a tocar un instrumento este año'
 );
 
-
+-- subtotal: suma de todos los valores unitarios de cada producto por su cantidad
 INSERT INTO facturas(
     id,
     fecha_factura,
