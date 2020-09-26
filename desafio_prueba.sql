@@ -72,6 +72,25 @@ INSERT INTO clientes(
     'libertad 270'
 );
 
+INSERT INTO categorias(
+    id,
+    nombre,
+    descripcion
+), VALUES(
+    '1',
+    'belleza',
+    'productos de belleza'
+), (
+    '2',
+    'ropa deportiva',
+    'ropa técnica para hacer deporte'
+), (
+    '3',
+    'instrumentos musicales',
+    'aprende a tocar un instrumento este año'
+);
+
+
 INSERT INTO productos(
     id,
     nombre,
@@ -128,76 +147,76 @@ INSERT INTO productos(
     '2'
 );
 
-INSERT INTO categorias(
-    id,
-    nombre,
-    descripcion
-), VALUES(
-    '1',
-    'belleza',
-    'productos de belleza'
-), (
-    '2',
-    'ropa deportiva',
-    'ropa técnica para hacer deporte'
-), (
-    '3',
-    'instrumentos musicales',
-    'aprende a tocar un instrumento este año'
-);
 
 -- subtotal: suma de todos los valores unitarios de cada producto por su cantidad
+
+-- 10 facturas
+-- 2 para el cliente 1, con 2 y 3 productos
+-- 3 para el cliente 2, con 3, 2 y 3 productos
+-- 1 para el cliente 3, con 1 producto
+-- 4 para el cliente 4, con 2, 3, 4 y 1 producto
+
 INSERT INTO facturas(
     id,
     fecha_factura,
     subtotal,
     clientes_id
 ), VALUES(
+    -- 2 productos
     '1',
     '2001-02-03',
-    '',
+    '16.000',
     '1'
 ), (
+    -- 3 productos
     '2',
     '2001-03-03',
-    '',
+    '60.000',
     '1'
 ), (
+    -- 3 productos
     '3',
     '2005-02-06',
     '',
     '2'
 ), (
+    -- 2 productos
     '4',
     '2006-01-02',
     '',
     '2'
 ), (
+    -- 3 productos
     '5',
     '2007-05-07',
     '',
     '2'
 ), (
+    -- 1 prodcuto
     '6',
     '2012-02-01',
     '',
     '3'
 ), (
+    -- 2 productos
     '7',
     '2019-01-02',
     '',
     '4'
 ), (
+    -- 3 productos
     '8',
     '2019-02-03',
     '',
     '4'
 ), (
+    -- 4 productos
     '9',
     '2020-02-08',
     '',
     '4'
 ), (
+    -- 1 producto
     '10',
     '2020-03-01',
     '',
