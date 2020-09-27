@@ -307,7 +307,7 @@ GROUP BY clientes_id
 ORDER BY clientes_id;
 
 
-SELECT COUNT DISTINCT clientes_id FROM
+SELECT COUNT(DISTINCT clientes_id) FROM
 facturas AS fas INNER JOIN
 facturas_productos AS fapro ON
 fas.id_factura = fapro.facturas_id
