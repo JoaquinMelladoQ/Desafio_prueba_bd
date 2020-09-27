@@ -1,6 +1,6 @@
 CREATE DATABASE prueba;
 
-\c pruebas;
+\c prueba;
 
 CREATE TABLE clientes(
     id INT NOT NULL UNIQUE PRIMARY KEY,
@@ -242,7 +242,7 @@ INSERT INTO facturas_productos(
     id,
     facturas_id,
     productos_id,
-    cantidad,
+    cantidad
 ) VALUES(
     '1',
     '1', -- facturas_id 
@@ -303,17 +303,17 @@ INSERT INTO facturas_productos(
 -- ¿Cuantos clientes han comprado el producto 6.
 
 
-SELECT clientes_id FROM facturas
+SELECT cliente_id FROM facturas
 ORDER BY subtotal DESC LIMIT 1;
 
 
-SELECT clientes_id FROM facturas
+SELECT cliente_id FROM facturas
 WHERE subtotal > 100
-GROUP BY clientes_id
-ORDER BY clientes_id;
+GROUP BY cliente_id
+ORDER BY cliente_id;
 
 
-SELECT COUNT(DISTINCT clientes_id) FROM
+SELECT COUNT(DISTINCT cliente_id) FROM
 facturas AS fas INNER JOIN
 facturas_productos AS fapro ON
 fas.id_factura = fapro.facturas_id
