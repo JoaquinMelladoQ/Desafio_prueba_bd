@@ -1,10 +1,12 @@
-##*Descripción*
+## *Descripción*
+
 En el siguiente caso, se deberá modelar la siguiente problematica, revisar que el modelo haya
 quedado en 3FN, para luego pasar a crear el modelo en la base de datos, poblar la base de datos y
 finalmente realizar consultas sobre la misma. Para realizar los diagramas se recomienda utilizar http://
 draw.io
 
-##*Parte 1: Crear modelo lógico para el siguiente caso.*
+### *Parte 1: Crear modelo lógico para el siguiente caso.*
+
 + Una Factura pertenece a un cliente
 + El cliente tiene id, nombre, rut y dirección
 + Una factura tiene numero de factura, fecha de la factura, subtotal, iva y precio total
@@ -16,7 +18,7 @@ todos los valores unitarios multiplicado por la cantidad respectiva.
 + Cada producto pertenece a una categoría, la cual tiene un id, el nombre de la categoría y una
 descripción.
 
-##*Parte 2: Creando el modelo en la base de datos*
+### *Parte 2: Creando el modelo en la base de datos*
 Se debe crear el modelo en la base de datos, en una base de datos llamada prueba , e insertar los
 siguientes registros:
 + 5 clientes
