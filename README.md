@@ -23,11 +23,11 @@ siguientes registros:
 + 5 clientes
 + 8 productos
 + 3 categorias
-+ 10 facturas
-+ 2 para el cliente 1, con 2 y 3 productos
-+ 3 para el cliente 2, con 3, 2 y 3 productos
-+ 1 para el cliente 3, con 1 producto
-+ 4 para el cliente 4, con 2, 3, 4 y 1 producto
++ 10 facturas:
+   + 2 para el cliente 1, con 2 y 3 productos
+   + 3 para el cliente 2, con 3, 2 y 3 productos
+   + 1 para el cliente 3, con 1 producto
+   + 4 para el cliente 4, con 2, 3, 4 y 1 producto
 
 ### *Parte 3: Consultas*
 
