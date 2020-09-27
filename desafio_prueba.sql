@@ -58,7 +58,7 @@ INSERT INTO clientes(
     '3',
     'Camilo',
     '125456578',
-    'mata 310'
+    'matta 310'
 ), (
     '4',
     'Florencia',
@@ -111,7 +111,7 @@ INSERT INTO productos(
 ), (
     '3',
     'polera',
-    'polera con filtro uv'
+    'polera con filtro uv',
     '35',
     '2'
 ), (
