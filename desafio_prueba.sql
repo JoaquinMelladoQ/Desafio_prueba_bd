@@ -27,15 +27,18 @@ CREATE TABLE productos(
     nombre VARCHAR(50) NOT NULL,
     descripcion VARCHAR(200) NOT NULL,
     valor_unitario INT NOT NULL,
-    categoria_id FOREIGN KEY
+    categoria_id INT,
+    FOREIGN KEY (categoria_id)
     REFERENCES categorias(id)
 );
 
 CREATE TABLE facturas_productos(
     id INT NOT NULL UNIQUE PRIMARY KEY,
-    facturas_id FOREIGN KEY
-    REFERENCES facturas (id),
-    productos_id FOREIGN KEY
+    facturas_id INT,
+    FOREIGN KEY (facturas_id)
+    REFERENCES facturas (id_factura),
+    productos_id INT,
+    FOREIGN KEY (productos_id)
     REFERENCES productos (id),
     cantidad INT NOT NULL
 );
@@ -45,7 +48,7 @@ INSERT INTO clientes(
     nombre,
     rut,
     direccion
-), VALUES(
+) VALUES(
     '1',
     'Esposito',
     '22533335',
