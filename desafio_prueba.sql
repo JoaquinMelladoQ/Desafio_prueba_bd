@@ -95,7 +95,7 @@ INSERT INTO productos(
     nombre,
     descripcion,
     valor_unitario,
-    categoria_id
+    categorias_id
 ), VALUES(
     '1',
     'crema',
