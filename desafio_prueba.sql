@@ -8,7 +8,7 @@ CREATE TABLE clientes(
 );
 
 CREATE TABLE facturas(
-    id INT NOT NULL UNIQUE PRIMARY KEY,
+    id_factura INT NOT NULL UNIQUE PRIMARY KEY,
     fecha_factura INT NOT NULL,
     subtotal INT NOT NULL,
     clientes_id INT NOT NULL FOREIGN KEY (id)
@@ -301,11 +301,18 @@ INSERT INTO facturas_productos(
 SELECT clientes_id FROM facturas
 ORDER BY subtotal DESC LIMIT 1;
 
+
 SELECT clientes_id FROM facturas
 WHERE subtotal > 100
 GROUP BY clientes_id
 ORDER BY clientes_id;
 
+
+SELECT COUNT DISTINCT clientes_id FROM
+facturas AS fa INNER JOIN
+facturas_productos AS fapro ON
+fa.id_factura = fapro.facturas_id
+WHERE productos_id = 6;
 
 
 
