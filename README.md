@@ -29,7 +29,8 @@ siguientes registros:
 + 3 para el cliente 2, con 3, 2 y 3 productos
 + 1 para el cliente 3, con 1 producto
 + 4 para el cliente 4, con 2, 3, 4 y 1 producto
-##*Parte 3: Consultas*
+
+### *Parte 3: Consultas*
 
 Realizar las siguientes consultas:
 + ¿Que cliente realizó la compra más cara?
