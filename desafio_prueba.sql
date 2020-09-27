@@ -11,8 +11,9 @@ CREATE TABLE facturas(
     id_factura INT NOT NULL UNIQUE PRIMARY KEY,
     fecha_factura INT NOT NULL,
     subtotal INT NOT NULL,
-    clientes_id INT NOT NULL FOREIGN KEY (id)
-    REFERENCES cliente (id)
+    cliente_id  INT NOT NULL,
+    FOREIGN KEY(cliente_id)
+    REFERENCES clientes(id)
 );
 
 CREATE TABLE categorias(
