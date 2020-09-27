@@ -239,54 +239,54 @@ INSERT INTO facturas_productos(
     cantidad,
 ), VALUES(
     '1',
-    '1',
+    '1', -- facturas_id 
     '1', -- crema * 2 = 160
-    '2'
+    '2' -- cantidad  
 ), (
     '2',
-    '2',
+    '2', -- facturas_id
     '6', -- flauta * 3 = 150
-    '3'
+    '3' -- cantidad
 ), (
     '3',
-    '3',
+    '3', -- facturas_id
     '3', -- polera * 3 = 105
-    '3'
+    '3' -- cantidad
 ), (
     '4',
-    '4',
+    '4', -- facturas_id
     '5', --piano * 2 = 600
-    '2'
+    '2' -- cantidad
 ), (
     '5',
-    '5',
+    '5', -- facturas_id
     '4', -- guitarra * 3 = 90
-    '3'
+    '3' -- cantidad
 ), (
     '6',
-    '6',
+    '6', -- facturas_id
     '7', -- camisa * 1 = 25
-    '1'
+    '1' -- cantidad
 ), (
     '7',
-    '7',
+    '7', -- facturas_id
     '8', -- gorro * 2 = 20
-    '2'
+    '2' -- cantidad
 ), (
     '8',
-    '8',
+    '8', -- facturas_id
     '4', -- guitarra * 3 = 90
-    '3'
+    '3' -- cantidad
 ), (
     '9',
-    '9',
+    '9', -- facturas_id
     '5', -- piano * 4 = 1200
-    '4'
+    '4' -- cantidad
 ), (
     '10',
-    '10',
+    '10', -- facturas_id
     '6', -- flauta * 1 = 50
-    '1'
+    '1' -- cantidad
 );
 
 
