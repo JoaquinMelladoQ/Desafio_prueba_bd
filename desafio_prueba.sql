@@ -171,63 +171,63 @@ INSERT INTO facturas(
     -- 3 productos
     '2',
     '2001-03-03',
-    '',
+    '150',
     '1'
     -- Esposito
 ), (
     -- 3 productos
     '3',
     '2005-02-06',
-    '',
+    '105',
     '2'
     -- Esperanza
 ), (
     -- 2 productos
     '4',
     '2006-01-02',
-    '',
+    '600',
     '2'
     -- Esperanza
 ), (
     -- 3 productos
     '5',
     '2007-05-07',
-    '',
+    '90',
     '2'
     -- Esperanza
 ), (
     -- 1 prodcuto
     '6',
     '2012-02-01',
-    '',
+    '25',
     '3'
     -- Camilo
 ), (
     -- 2 productos
     '7',
     '2019-01-02',
-    '',
+    '20',
     '4'
     -- Florencia
 ), (
     -- 3 productos
     '8',
     '2019-02-03',
-    '',
+    '90',
     '4'
     -- Florencia
 ), (
     -- 4 productos
     '9',
     '2020-02-08',
-    '',
+    '1200',
     '4'
     -- Florencia
 ), (
     -- 1 producto
     '10',
     '2020-03-01',
-    '',
+    '50',
     '4'
     -- Florencia
 );
@@ -237,7 +237,6 @@ INSERT INTO facturas_productos(
     facturas_id,
     productos_id,
     cantidad,
-    total
 ), VALUES(
     '1',
     '1',
