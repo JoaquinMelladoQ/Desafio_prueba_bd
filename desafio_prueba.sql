@@ -36,7 +36,7 @@ CREATE TABLE facturas_productos(
     REFERENCES facturas (id),
     productos_id FOREIGN KEY
     REFERENCES productos (id),
-    cantidad INT NOT NULL,
+    cantidad INT NOT NULL
 );
 
 INSERT INTO clientes(
@@ -308,9 +308,9 @@ ORDER BY clientes_id;
 
 
 SELECT COUNT DISTINCT clientes_id FROM
-facturas AS fa INNER JOIN
+facturas AS fas INNER JOIN
 facturas_productos AS fapro ON
-fa.id_factura = fapro.facturas_id
+fas.id_factura = fapro.facturas_id
 WHERE productos_id = 6;
 
 
