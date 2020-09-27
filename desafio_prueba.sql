@@ -1,5 +1,7 @@
 CREATE DATABASE prueba;
 
+\c pruebas;
+
 CREATE TABLE clientes(
     id INT NOT NULL UNIQUE PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
@@ -9,7 +11,7 @@ CREATE TABLE clientes(
 
 CREATE TABLE facturas(
     id_factura INT NOT NULL UNIQUE PRIMARY KEY,
-    fecha_factura INT NOT NULL,
+    fecha_factura DATE NOT NULL,
     subtotal INT NOT NULL,
     cliente_id  INT NOT NULL,
     FOREIGN KEY(cliente_id)
@@ -27,8 +29,8 @@ CREATE TABLE productos(
     nombre VARCHAR(50) NOT NULL,
     descripcion VARCHAR(200) NOT NULL,
     valor_unitario INT NOT NULL,
-    categoria_id INT,
-    FOREIGN KEY (categoria_id)
+    categorias_id INT,
+    FOREIGN KEY (categorias_id)
     REFERENCES categorias(id)
 );
 
@@ -79,7 +81,7 @@ INSERT INTO categorias(
     id,
     nombre,
     descripcion
-), VALUES(
+) VALUES(
     '1',
     'belleza',
     'productos de belleza'
@@ -100,7 +102,7 @@ INSERT INTO productos(
     descripcion,
     valor_unitario,
     categorias_id
-), VALUES(
+) VALUES(
     '1',
     'crema',
     'crema para piel',
@@ -160,11 +162,11 @@ INSERT INTO productos(
 -- 4 para el cliente 4, con 2, 3, 4 y 1 producto
 
 INSERT INTO facturas(
-    id,
+    id_factura,
     fecha_factura,
     subtotal,
-    clientes_id
-), VALUES(
+    cliente_id
+) VALUES(
     -- 2 productos
     '1',
     '2001-02-03',
@@ -241,7 +243,7 @@ INSERT INTO facturas_productos(
     facturas_id,
     productos_id,
     cantidad,
-), VALUES(
+) VALUES(
     '1',
     '1', -- facturas_id 
     '1', -- crema * 2 = 160
